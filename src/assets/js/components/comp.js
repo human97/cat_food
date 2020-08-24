@@ -1,0 +1,2 @@
+// components
+console.log('comp')

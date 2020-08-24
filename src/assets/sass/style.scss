@@ -1,0 +1,26 @@
+/* Default styles */
+
+@import 'src/assets/sass/vars';
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: $font;
+    font-style: normal;
+    color: #fff;
+    background: #000 url(/assets/img/page_bg.jpg);
+    min-height: 100vh;
+    text-align: center;
+
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+}
+
+@import 'src/assets/sass/main';
