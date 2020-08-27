@@ -1,5 +1,6 @@
 /* Default styles */
 
+@import 'src/assets/sass/normalize';
 @import 'src/assets/sass/vars';
 
 *,
@@ -12,10 +13,10 @@
 }
 
 body {
-    font-family: $font;
+    font-family: $fonts;
     font-style: normal;
     color: #fff;
-    background: #000 url(/assets/img/page_bg.jpg);
+    background: #000 url(../img/page_bg.jpg);
     min-height: 100vh;
     text-align: center;
 
@@ -23,4 +24,6 @@ body {
     min-height: -webkit-fill-available;
 }
 
-@import 'src/assets/sass/main';
+/* blocks */
+@import 'src/assets/sass/blocks/main';
+@import 'src/assets/sass/blocks/card';
