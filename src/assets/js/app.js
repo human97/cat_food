@@ -1,1 +1,1 @@
-//=  components/comp.js
+//=  components/hover.js

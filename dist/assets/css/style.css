@@ -387,11 +387,7 @@ body {
     border-radius: 14px;
     -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-}
-
-.card_border:hover,
-.card_border:hover .card_weight {
-    background: #2ea8e6;
+    cursor: pointer;
 }
 
 .card {
@@ -406,7 +402,6 @@ body {
     text-align: left;
     -webkit-clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
     clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
-    cursor: pointer;
 }
 
 .card--info .card_label {

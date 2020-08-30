@@ -68,4 +68,3 @@ buy.addEventListener('click', function () {
     cardWeight.style.backgroundColor = colorSelected
     cardBuy.textContent = 'Печень утки разварная с артишоками.'
 })
-"use strict";
