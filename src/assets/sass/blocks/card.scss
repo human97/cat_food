@@ -1,5 +1,11 @@
 /* card */
 
+.container_cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .card_wrapper {
     width: 320px;
 }
@@ -92,7 +98,7 @@
 }
 
 .card_buy {
-    margin: 15px 0 0 0;
+    margin: 15px 0 50px 0;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
