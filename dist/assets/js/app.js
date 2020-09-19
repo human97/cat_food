@@ -3,14 +3,53 @@
 const containerCards = document.querySelector('.container_cards')
 let cardBorder = containerCards.querySelectorAll('.card_border')
 let cardLabel
+let cardDescr
 let cardWeight
 let cardBuy
-//let buy = containerCards.querySelectorAll('.buy')
 const colorDefault = 'rgb(22, 152, 217)'
 const colorDefaultHover = 'rgb(46, 168, 230)'
 const colorSelected = 'rgb(217, 22, 103)'
 const colorSelectedHover = 'rgb(230, 46, 122)'
 
+// при клике на карточку
+containerCards.addEventListener('click', (e) => {
+    let card = e.target.closest('.card_border') //элемент в карточке или карточка на которой кликнули
+
+    if (card) {
+        card.classList.toggle('selected')
+        cardLabel = card.querySelector('.card_label')
+        cardWeight = card.querySelector('.card_weight')
+        cardBuy = card.parentNode.querySelector('.card_buy')
+        cardDescr = card.querySelector('.card_descr')
+
+        if (cardLabel.textContent === 'Котэ не одобряет?') {
+            cardLabel.style.color = '#666'
+            cardLabel.textContent = 'Сказочное заморское яство'
+        }
+        let colorBorder = card.style.backgroundColor
+        if (colorBorder === colorDefaultHover || colorBorder === colorDefault) {
+            card.style.backgroundColor = colorSelected
+            cardWeight.style.backgroundColor = colorSelected
+
+            // условия для замены текста в параграфе(.card_descr) под карточкой товара
+            if (cardDescr.textContent === 'с курой') {
+                cardBuy.textContent = 'Филе из цыплят с трюфелями в бульоне.'
+            }
+            if (cardDescr.textContent === 'с рыбой') {
+                cardBuy.textContent = 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+            }
+            if (cardDescr.textContent === 'с фуа-гра') {
+                cardBuy.textContent = 'Печень утки разварная с артишоками.'
+            }
+
+        } else if (colorBorder === colorSelected || colorBorder === colorSelectedHover) {
+            card.style.backgroundColor = colorDefault
+            cardWeight.style.backgroundColor = colorDefault
+            cardBuy.innerHTML = `Чего сидишь? Порадуй котэ,
+            <a href="#" class="buy">купи</a><span>.</span>`
+        }
+    }
+})
 
 // функция наведения курсора на карточку
 function mouseEnter(e) {
@@ -50,14 +89,14 @@ function mouseLeave(e) {
     })
 }
 
-
-// функция клике на карточке
-function click(e) {
+/*
+// функция при клике на карточку
+ function click(e) {
     e.addEventListener('click', function () {
         e.classList.toggle('selected')
         cardLabel = e.querySelector('.card_label')
         cardWeight = e.querySelector('.card_weight')
-        cardBuy = e.parentNode.querySelector('.card_buy')
+        let cardBuy = e.parentNode.querySelector('.card_buy')
 
         if (cardLabel.textContent === 'Котэ не одобряет?') {
             cardLabel.style.color = '#666'
@@ -82,21 +121,16 @@ function click(e) {
             cardWeight.style.backgroundColor = colorDefault
             cardBuy.innerHTML = `Чего сидишь? Порадуй котэ,
         <a href="#" class="buy">купи</a><span>.</span>`
+
         }
     })
 }
-
-cardBorder.forEach(mouseEnter) // повесил на карточки логику при наведении
-cardBorder.forEach(mouseLeave) // повесил на карточку логику при уходе курсора
-cardBorder.forEach(click) // повесил на карточку логику при клике
-
-/*
-
-buy.addEventListener('click', function () {
-    cardBorder.classList.add('selected')
-    cardBorder.style.backgroundColor = colorSelected
-    cardWeight.style.backgroundColor = colorSelected
-    cardBuy.textContent = 'Печень утки разварная с артишоками.'
-})
 */
+
+// повесил на карточки логику поведения при наведении
+cardBorder.forEach((e) => {
+    mouseEnter(e);
+    mouseLeave(e);
+    //click(e)
+})
 "use strict";
