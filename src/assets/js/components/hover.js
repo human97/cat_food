@@ -1,5 +1,18 @@
 // hover
 
+// функция для замены текста в параграфе(.card_descr) под карточкой товара
+const changeText = () => {
+    if (cardDescr.textContent === 'с курой') {
+        cardBuy.textContent = 'Филе из цыплят с трюфелями в бульоне.'
+    }
+    if (cardDescr.textContent === 'с рыбой') {
+        cardBuy.textContent = 'Головы щучьи с чесноком да свежайшая сёмгушка.'
+    }
+    if (cardDescr.textContent === 'с фуа-гра') {
+        cardBuy.textContent = 'Печень утки разварная с артишоками.'
+    }
+}
+
 const containerCards = document.querySelector('.container_cards')
 let cardBorder = containerCards.querySelectorAll('.card_border')
 let cardLabel
@@ -14,7 +27,9 @@ const colorSelectedHover = 'rgb(230, 46, 122)'
 // при клике на карточку
 containerCards.addEventListener('click', (e) => {
     let card = e.target.closest('.card_border') //элемент в карточке или карточка на которой кликнули
+    let link = e.target.closest('.buy') // ссылка купи
 
+    // если клик на карточке
     if (card) {
         card.classList.toggle('selected')
         cardLabel = card.querySelector('.card_label')
@@ -31,16 +46,7 @@ containerCards.addEventListener('click', (e) => {
             card.style.backgroundColor = colorSelected
             cardWeight.style.backgroundColor = colorSelected
 
-            // условия для замены текста в параграфе(.card_descr) под карточкой товара
-            if (cardDescr.textContent === 'с курой') {
-                cardBuy.textContent = 'Филе из цыплят с трюфелями в бульоне.'
-            }
-            if (cardDescr.textContent === 'с рыбой') {
-                cardBuy.textContent = 'Головы щучьи с чесноком да свежайшая сёмгушка.'
-            }
-            if (cardDescr.textContent === 'с фуа-гра') {
-                cardBuy.textContent = 'Печень утки разварная с артишоками.'
-            }
+            changeText()
 
         } else if (colorBorder === colorSelected || colorBorder === colorSelectedHover) {
             card.style.backgroundColor = colorDefault
@@ -48,6 +54,23 @@ containerCards.addEventListener('click', (e) => {
             cardBuy.innerHTML = `Чего сидишь? Порадуй котэ,
             <a href="#" class="buy">купи</a><span>.</span>`
         }
+    }
+
+    // если клик на ссылке "купи"
+    if (link) {
+        let cardWrapper = link.parentNode.parentNode
+
+        card = cardWrapper.querySelector('.card_border')
+        card.classList.add('selected')
+        card.style.backgroundColor = colorSelected
+
+        cardWeight = cardWrapper.querySelector('.card_weight')
+        cardWeight.style.backgroundColor = colorSelected
+
+        cardBuy = cardWrapper.querySelector('.card_buy')
+        cardDescr = cardWrapper.querySelector('.card_descr')
+
+        changeText()
     }
 })
 

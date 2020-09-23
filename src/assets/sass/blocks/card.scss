@@ -1,13 +1,49 @@
 /* card */
 
-.container_cards{
+.container_cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 1040px) {
+        justify-content: space-around;
+    }
 }
 
 .card_wrapper {
     width: 320px;
+}
+
+.card_wrapper:nth-child(odd) {
+    margin: 0 20px;
+
+    @media(max-width: 640px) {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1040px) {
+    .card_wrapper:nth-child(1) {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_wrapper:nth-child(even) {
+        margin: 0 20px;
+
+        @media (max-width: 640px) {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .card_wrapper:nth-child(1) {
+        width: 320px;
+        display: block;
+    }
 }
 
 .card_border {
