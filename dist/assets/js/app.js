@@ -1,3 +1,34 @@
+// disabled card
+
+// функция отключения карточек
+function disabledCards(e) {
+    if (e.classList.contains('disabled')) {
+        e.querySelector('.card_border').style.backgroundColor = '#b3b3b3'
+        e.querySelector('.card_weight').style.backgroundColor = '#b3b3b3'
+
+        //
+        e.querySelector('.shadow').style.display = 'block'
+
+        e.querySelector('.card_buy').style.color = '#ffff66'
+
+        // условия замены текста в параграфе(.card_descr) под карточкой товара при отключении карточки
+        if (e.querySelector('.card_descr').textContent === 'с курой') {
+            e.querySelector('.card_buy').textContent = 'Печалька, с курой закончился.'
+        }
+        if (e.querySelector('.card_descr').textContent === 'с рыбой') {
+            e.querySelector('.card_buy').textContent = ' Печалька, с рыбой закончился.'
+        }
+        if (e.querySelector('.card_descr').textContent === 'с фуа-гра') {
+            e.querySelector('.card_buy').textContent = 'Печалька, с фуа-гра закончился.'
+        }
+    }
+}
+
+const containerCards = document.querySelector('.container_cards')
+const cardsWrappers = containerCards.querySelectorAll('.card_wrapper')
+
+// повесил на обертки карточек логику поведения при отключении
+cardsWrappers.forEach(disabledCards)
 // hover
 
 // функция для замены текста в параграфе(.card_descr) под карточкой товара
@@ -13,7 +44,7 @@ const changeText = () => {
     }
 }
 
-const containerCards = document.querySelector('.container_cards')
+
 let cardBorder = containerCards.querySelectorAll('.card_border')
 let cardLabel
 let cardDescr
@@ -24,7 +55,8 @@ const colorDefaultHover = 'rgb(46, 168, 230)'
 const colorSelected = 'rgb(217, 22, 103)'
 const colorSelectedHover = 'rgb(230, 46, 122)'
 
-// при клике на карточку
+
+// действия при клике на карточку или ссылку "купи"
 containerCards.addEventListener('click', (e) => {
     let card = e.target.closest('.card_border') //элемент в карточке или карточка на которой кликнули
     let link = e.target.closest('.buy') // ссылка купи
@@ -73,6 +105,7 @@ containerCards.addEventListener('click', (e) => {
         changeText()
     }
 })
+
 
 // функция наведения курсора на карточку
 function mouseEnter(e) {

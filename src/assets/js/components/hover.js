@@ -13,7 +13,7 @@ const changeText = () => {
     }
 }
 
-const containerCards = document.querySelector('.container_cards')
+
 let cardBorder = containerCards.querySelectorAll('.card_border')
 let cardLabel
 let cardDescr
@@ -24,7 +24,8 @@ const colorDefaultHover = 'rgb(46, 168, 230)'
 const colorSelected = 'rgb(217, 22, 103)'
 const colorSelectedHover = 'rgb(230, 46, 122)'
 
-// при клике на карточку
+
+// действия при клике на карточку или ссылку "купи"
 containerCards.addEventListener('click', (e) => {
     let card = e.target.closest('.card_border') //элемент в карточке или карточка на которой кликнули
     let link = e.target.closest('.buy') // ссылка купи
@@ -73,6 +74,7 @@ containerCards.addEventListener('click', (e) => {
         changeText()
     }
 })
+
 
 // функция наведения курсора на карточку
 function mouseEnter(e) {
