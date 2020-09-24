@@ -53,7 +53,7 @@ containerCards.addEventListener('click', (e) => {
             card.style.backgroundColor = colorDefault
             cardWeight.style.backgroundColor = colorDefault
             cardBuy.innerHTML = `Чего сидишь? Порадуй котэ,
-            <a href="#" class="buy">купи</a><span>.</span>`
+            <span class="buy">купи</span><span>.</span>`
         }
     }
 

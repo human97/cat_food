@@ -535,7 +535,6 @@ body {
 }
 
 .card_buy .buy {
-    text-decoration: none;
     border-bottom: 1px dashed #1698d9;
     font-weight: 700;
     color: #1698d9;
