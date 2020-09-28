@@ -1,12 +1,11 @@
 /* main */
 
 .main {
-  margin: auto;
-  max-width: 1120px;
-}
-
-.main_title {
-  font-size: 36px;
-  line-height: 1.2;
-  font-weight: 100;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+   /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }

@@ -5,10 +5,7 @@ function disabledCards(e) {
     if (e.classList.contains('disabled')) {
         e.querySelector('.card_border').style.backgroundColor = '#b3b3b3'
         e.querySelector('.card_weight').style.backgroundColor = '#b3b3b3'
-
-        //
         e.querySelector('.shadow').style.display = 'block'
-
         e.querySelector('.card_buy').style.color = '#ffff66'
 
         // условия замены текста в параграфе(.card_descr) под карточкой товара при отключении карточки

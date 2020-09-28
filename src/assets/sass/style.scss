@@ -17,11 +17,7 @@ body {
     font-style: normal;
     color: #fff;
     background: #000 url(../img/page_bg.jpg);
-    min-height: 100vh;
     text-align: center;
-
-    /* mobile viewport bug fix */
-    min-height: -webkit-fill-available;
 }
 
 /* blocks */

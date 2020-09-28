@@ -1,5 +1,21 @@
 /* card */
 
+.wrapper_product {
+    margin: 0 auto;
+    max-width: 1120px;
+    width: 100%;
+}
+
+.wrapper_product--title {
+    margin: 0 0  22px;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 100;
+}
+
 .container_cards {
     display: flex;
     justify-content: space-between;
@@ -149,7 +165,7 @@
 }
 
 .card_buy {
-    margin: 15px 0 50px 0;
+    margin: 15px 0 40px;
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
