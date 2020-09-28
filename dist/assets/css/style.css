@@ -391,7 +391,7 @@ body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1056px) {
     .container_cards {
         justify-content: space-around;
     }
@@ -424,9 +424,9 @@ body {
     }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1056px) {
     .card_wrapper:nth-child(1) {
-        width: 65%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;

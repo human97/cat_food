@@ -21,7 +21,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media (max-width: 1040px) {
+    @media (max-width: 1056px) {
         justify-content: space-around;
     }
 }
@@ -52,8 +52,8 @@
 
 .card_wrapper:nth-child(1) {
 
-    @media (max-width: 1040px) {
-        width: 65%;
+    @media (max-width: 1056px) {
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
