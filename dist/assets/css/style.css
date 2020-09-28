@@ -371,12 +371,12 @@ body {
 /* card */
 .wrapper_product {
     margin: 0 auto;
-    max-width: 1120px;
+    max-width: 1160px;
     width: 100%;
 }
 
 .wrapper_product--title {
-    margin: 0 0  22px;
+    margin: 0 0  23px;
 }
 
 .title {
@@ -458,8 +458,8 @@ body {
     height: 480px;
     background: #1698d9;
     border-radius: 14px;
-    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    -webkit-clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     cursor: pointer;
 }
 
@@ -473,8 +473,8 @@ body {
     padding: 24px 0 0 49px;
     border-radius: 11px;
     text-align: left;
-    -webkit-clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
-    clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+    -webkit-clip-path: polygon(14.5% 0, 100% 0, 100% 100%, 0 100%, 0 8.8%);
+    clip-path: polygon(14.5% 0, 100% 0, 100% 100%, 0 100%, 0 8.8%);
 }
 
 .card--info .card_label {
