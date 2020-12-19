@@ -1,8 +1,5 @@
 {
-    "name": "gulp-web",
-    "version": "1.0.0",
-    "description": "project using gulp4",
-    "author": "human",
+    "private": "true",
     "devDependencies": {
         "@babel/core": "^7.8.4",
         "@babel/preset-env": "^7.8.4",
@@ -19,7 +16,9 @@
         "gulp-rigger": "^0.5.8",
         "gulp-sass": "^4.0.2",
         "gulp-strip-css-comments": "^2.0.0",
+        "gulp-terser": "^2.0.0",
         "gulp-uglify": "^3.0.2",
         "panini": "^1.6.3"
-    }
+    },
+    "dependencies": {}
 }
