@@ -1,7 +1,7 @@
 /* object_cards */
 
 let cards = [{
-  availability: '',
+    availability: '',
     card_descr: 'с фуа-гра',
     card_specs: [10, 'порций', '', 'мышь в подарок', ''],
     cardWeightCount: '0,5',
