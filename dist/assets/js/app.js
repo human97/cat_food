@@ -1,7 +1,33 @@
 "use strict";
 
-// disabled card
+/* object_cards */
+var cards = [{
+  availability: '',
+  card_descr: 'с фуа-гра',
+  card_specs: [10, 'порций', '', 'мышь в подарок', ''],
+  cardWeightCount: '0,5'
+}, {
+  availability: '',
+  card_descr: 'с рыбой',
+  card_specs: [40, 'порций', '<b>2 </b>', 'мыши в подарок', ''],
+  cardWeightCount: '2'
+}, {
+  availability: 'disabled',
+  card_descr: 'с курой',
+  card_specs: [100, 'порций', '<b>5 </b>', 'мышей в подарок', '<br>заказчик доволен'],
+  cardWeightCount: '5'
+}];
+/* load_cards */
+
+var containerCards = document.querySelector('.container_cards');
+
+for (var _i = 0, _cards = cards; _i < _cards.length; _i++) {
+  var card = _cards[_i];
+  containerCards.innerHTML += "<div class=\"card_wrapper ".concat(card.availability, "\">\n      <div class=\"shadow\"></div>\n      <div class=\"card_border \">\n              \n      <!-- card -->\n      <div class=\"card\">\n      <div class=\"card--info\">\n      <p class=\"card_label\">\u0421\u043A\u0430\u0437\u043E\u0447\u043D\u043E\u0435 \u0437\u0430\u043C\u043E\u0440\u0441\u043A\u043E\u0435 \u044F\u0441\u0442\u0432\u043E</p>\n      <p class=\"card_title\">\u041D\u044F\u043C\u0443\u0448\u043A\u0430</p>\n      <p class=\"card_descr\">").concat(card.card_descr, "</p>\n      <p class=\"card_specs\">\n        <b>").concat(card.card_specs[0], "</b> ").concat(card.card_specs[1], "\n        <br><b>").concat(card.card_specs[2], "</b>").concat(card.card_specs[3] + card.card_specs[4], "\n        </p>                     \n      </div>\n      <div class=\"card_img\"></div>\n      <div class=\"card_weight\">\n        <p class=\"card_weight--count\">").concat(card.cardWeightCount, "</p>\n        <p class=\"card_weight--measure\">\u043A\u0433</p>\n      </div>                 \n      </div>\n      <!-- /.card -->\n                    \n      </div>\n      <!-- /.card_border -->\n              \n        <p class=\"card_buy \">\u0427\u0435\u0433\u043E \u0441\u0438\u0434\u0438\u0448\u044C? \u041F\u043E\u0440\u0430\u0434\u0443\u0439 \u043A\u043E\u0442\u044D,\n         <span class=\"buy\">\u043A\u0443\u043F\u0438</span><span>.</span>\n        </p>\n      </div>\n      <!-- /.card_wrapper -->");
+} // disabled card
 // функция отключения карточек
+
+
 function disabledCards(e) {
   if (e.classList.contains('disabled')) {
     e.querySelector('.card_border').style.backgroundColor = '#b3b3b3';
@@ -21,9 +47,9 @@ function disabledCards(e) {
       e.querySelector('.card_buy').textContent = 'Печалька, с фуа-гра закончился.';
     }
   }
-}
+} //const containerCards = document.querySelector('.container_cards')
 
-var containerCards = document.querySelector('.container_cards');
+
 var cardsWrappers = containerCards.querySelectorAll('.card_wrapper'); // повесил на обертки карточек логику поведения при отключении
 
 cardsWrappers.forEach(disabledCards); // hover
@@ -37,8 +63,6 @@ var colorDefault = 'rgb(22, 152, 217)';
 var colorDefaultHover = 'rgb(46, 168, 230)';
 var colorSelected = 'rgb(217, 22, 103)';
 var colorSelectedHover = 'rgb(230, 46, 122)'; // функция наведения курсора на карточку
-
-2;
 
 function mouseEnter(e) {
   e.addEventListener('mouseenter', function () {

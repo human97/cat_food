@@ -21,7 +21,7 @@ function disabledCards(e) {
     }
 }
 
-const containerCards = document.querySelector('.container_cards')
+//const containerCards = document.querySelector('.container_cards')
 const cardsWrappers = containerCards.querySelectorAll('.card_wrapper')
 
 // повесил на обертки карточек логику поведения при отключении

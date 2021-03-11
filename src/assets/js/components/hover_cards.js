@@ -12,9 +12,6 @@ const colorSelectedHover = 'rgb(230, 46, 122)'
 
 
 // функция наведения курсора на карточку
-2
-
-
 function mouseEnter(e) {
     e.addEventListener('mouseenter', function () {
         cardWeight = e.querySelector('.card_weight')
