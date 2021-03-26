@@ -1,6 +1,7 @@
 /* object_cards */
 
-let cards = [{
+let cards = [
+  {
     availability: '',
     card_descr: 'с фуа-гра',
     card_specs: [10, 'порций', '', 'мышь в подарок', ''],
