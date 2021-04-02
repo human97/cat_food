@@ -35,14 +35,14 @@ const path = {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/style.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,webmanifest,xml,webp,avif}",
         fonts: "src/assets/fonts/**/*"
     },
     watch: {
         html: "src/**/*.html",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico,webmanifest,xml,webp,avif}",
         fonts: "dist/assets/fonts/**/*"
     },
     clean: "./dist"
